@@ -1,0 +1,6 @@
+[package]
+name = "loudstream"
+version = "0.1.0"
+authors = ["jekrb <jake@burden.blog>"]
+
+[dependencies]

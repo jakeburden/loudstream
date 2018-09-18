@@ -1,10 +1,11 @@
 use std::io;
+use std::io::prelude::*;
 
-fn main() {
+fn main() -> io::Result<()> {
   let mut input = String::new();
-  match io::stdin().read_line(&mut input) {
-    Ok(_) => print!("{}", input.to_uppercase()),
-    Err(error) => println!("error: {}", error),
-  }
+  io::stdin().read_line(&mut input)?;
+  let loud = input.to_uppercase();
+  io::stdout().write(&loud.as_bytes())?;
+  Ok(())
 }
 
